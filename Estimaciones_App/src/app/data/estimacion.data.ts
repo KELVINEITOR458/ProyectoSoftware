@@ -1,4 +1,4 @@
-import { Proyect } from "../components/model/proyect";
+import { Proyect } from "../model/proyect";
 
 
 export const projectExtimation: Proyect = {
