@@ -8,6 +8,7 @@ export const projectExtimation: Proyect = {
         name: 'ACME',
         surname: ' ',
         address: {
+            country: "Ecuador",
             city: 'Quito',
             principalStreet: 'Salinas',
             secondaryStreet: 'Guayas',
@@ -20,6 +21,7 @@ export const projectExtimation: Proyect = {
         ruc: '0835878720001',
         name: 'Clear Mins',
         address: {
+            country: "Ecuador",
             city: 'Quito',
             principalStreet: 'Juan Pablo Sanz',
             secondaryStreet: 'Iñaquito',
@@ -94,6 +96,6 @@ export const projectExtimation: Proyect = {
             }
         ],
     },
-    cost_nom_mens:4816.82
+    cost_nom_mens: 4816.82
 }
 

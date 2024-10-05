@@ -6,10 +6,10 @@ import { projectExtimation } from '../data/estimacion.data';
   providedIn: 'root'
 })
 export class ProjectEstimateService {
-private project:Proyect = projectExtimation;
+  private project: Proyect = projectExtimation;
   constructor() { }
 
- getProject(): Proyect{
+  getProject(): Proyect {
     return this.project;
   }
 }
