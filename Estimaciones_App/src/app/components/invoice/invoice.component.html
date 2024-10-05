@@ -3,24 +3,25 @@
         <div class="card-header">
             <h3>Estimacion de proyectos de software</h3>
             <div>
-                <ul>
-                    <li>Duración del proyecto: {{proyect.customer.time}}</li>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong >Duración del proyecto:</strong> {{proyect.customer.time}}</li>
                 </ul>
             </div>
         </div>
         <div class="card-body">
             <div>
                 <h3>Cliente</h3>
-                <ul>
-                    <li>Nombre del cliente: {{proyect.customer.name}}</li>
-                    <li>Dirección: {{proyect.customer.address.city}}</li>
-                    <li>Requerimiento: {{proyect.customer.requirement}}</li>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Nombre del cliente:</strong> {{proyect.customer.name}}</li>
+                    <li class="list-group-item"><strong>Dirección:</strong> {{proyect.customer.address.city}} -  {{proyect.customer.address.country}}</li>
+                    <li class="list-group-item"><strong>Requerimiento:</strong> {{proyect.customer.requirement}}</li>
                 </ul>
             </div>
+            <br>
             <div>
                 <h3>Participantes</h3>
                 <div>
-                    <Table>
+                    <Table class="table table-striped">
                         <thead>
                             <th>Cantidad:</th>
                             <th>Rol:</th>
@@ -28,7 +29,7 @@
                             <th>Porcentaje de Participación:</th>
                         </thead>
                         <tbody>
-                            @for (item of proyect.monthly_costs.employee; track $index) {4
+                            @for (item of proyect.monthly_costs.employee; track $index) {
                                 <tr>
                                     <td>{{item.quantity}}</td>
                                     <td>{{item.nameRol}}</td>
@@ -39,30 +40,38 @@
                         </tbody>
                     </Table>
                 </div>
+                <br>
                 <div>
-                    <h2>Costos</h2>
-                    <div>
-                        <h3>Costos Adicionales</h3>
-                        <div>
-                            <ul>
-                                <li>Oficina: {{proyect.monthly_costs.office_rent.total}}</li>
-                                <li>Internet: {{proyect.monthly_costs.internet.total}}</li>
-                                <li>Computadores: {{proyect.monthly_costs.internet.total}}</li>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Costos Adicionales</h3>
+                        </div>
+                        
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item"> <strong>Oficina:</strong> {{proyect.monthly_costs.office_rent.total}}</li>
+                                <li class="list-group-item"><strong>Internet:</strong> {{proyect.monthly_costs.internet.total}}</li>
+                                <li class="list-group-item"><strong>Computadores:</strong> {{proyect.monthly_costs.internet.total}}</li>
                             </ul>
                         </div>
                     </div>
-                    <div>
-                        <h4>Costo total: USD {{proyect.total_cost}}</h4>
+                    <br>
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Costos Totales del Proyecto</h3>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item"><strong> Total: </strong> USD {{proyect.total_cost}}</li>
+                                <li class="list-group-item"><strong>Nómina Mensual:</strong> USD {{proyect.cost_nom_mens}}</li>
+                                <li class="list-group-item"><strong>Precio de venta final:</strong> USD {{proyect.sale_price}}</li>
+                                <li class="list-group-item"><strong>Utilidad 32%:</strong> USD {{proyect.profit}}</li>
+                            </ul>
+                        </div>
+                        
+
                     </div>
-                    <div>
-                        <h4>Nómina Mensual: USD {{proyect.cost_nom_mens}}</h4>
-                    </div>
-                    <div>
-                        <h4>Precio de venta final: USD {{proyect.sale_price}}</h4>
-                    </div>
-                    <div>
-                        <h4>Utilidad 32%: USD {{proyect.profit}}</h4>
-                    </div>
+                    
                 </div>
             </div>
         </div>

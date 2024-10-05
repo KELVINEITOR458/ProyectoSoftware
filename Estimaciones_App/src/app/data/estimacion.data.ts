@@ -50,7 +50,7 @@ export const projectExtimation: Proyect = {
         },
         employee: [
             {
-                nameRol: "Gerente de Proyect",
+                nameRol: "Gerente de Proyecto",
                 quantity: 1,
                 detailsRol: {
                     participation: 20,
