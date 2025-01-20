@@ -11,7 +11,7 @@ import { ProjectEstimateService } from '../../services/project-estimate.service'
 export class InvoiceComponent implements OnInit {
   proyect!:Proyect;
 
-  constructor(private service:ProjectEstimateService){}
+  constructor(private service:ProjectEstimateService){} 
 
   ngOnInit(): void {
     this.proyect = this.service.getProject();
